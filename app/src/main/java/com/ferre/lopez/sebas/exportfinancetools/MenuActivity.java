@@ -12,11 +12,11 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         Button buttonECACalculator = (Button)findViewById(R.id.buttonEcaCalculator);
-        buttonECACalculator.setOnClickListener((View.OnClickListener) this);
+        //buttonECACalculator.setOnClickListener((View.OnClickListener) this);
         Button buttonCIRRRates = (Button)findViewById(R.id.buttonCIRRRates);
-        buttonCIRRRates.setOnClickListener((View.OnClickListener) this);
+        //buttonCIRRRates.setOnClickListener((View.OnClickListener) this);
         Button buttonOECDConsensus = (Button) findViewById(R.id.buttonOECDConsensus);
-        buttonOECDConsensus.setOnClickListener((View.OnClickListener) this);
+        //buttonOECDConsensus.setOnClickListener((View.OnClickListener) this);
     }
 
     public void onClick(View v)
