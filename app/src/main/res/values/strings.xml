@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Export Finance Tools</string>
+    <string name="ECA_Calculator_button">ECA Calculator</string>
+    <string name="CIRR_Rates_button"> Get CIRR Rates</string>
+    <string name="OECD_Consensus_button"> Get OECD Consensus </string>
+    <string name="menu_name"> Menu of Export Finance Tools </string>
+</resources>
