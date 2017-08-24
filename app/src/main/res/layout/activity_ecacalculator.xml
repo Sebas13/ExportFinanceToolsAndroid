@@ -6,21 +6,60 @@
     android:layout_height="match_parent"
     tools:context="com.ferre.lopez.sebas.exportfinancetools.ECACalculatorActivity">
 
-    <android.support.design.widget.AppBarLayout
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <TextView android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Introduce contenido español" />
 
-    </android.support.design.widget.AppBarLayout>
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal" />
 
-    <include layout="@layout/content_ecacalculator" />
+            <TextView android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Introduce contenido tercer pais" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+            <TextView android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contenido Local" />
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+            <Button android:id="@+id/buttonCIRRRates2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/CIRR_Rates_button"
+            android:onClick="getCIRRRates"/>
+
+        <Button android:id="@+id/buttonOECDConsensus2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/OECD_Consensus_button"
+            android:onClick="getOECDConsensus"/>
+
+    </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
@@ -28,6 +67,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
+        android:onClick="calculate"
         app:srcCompat="@android:drawable/ic_dialog_email" />
+
+
+
 
 </android.support.design.widget.CoordinatorLayout>
