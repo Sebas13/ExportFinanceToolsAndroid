@@ -10,11 +10,13 @@
     <Button android:id="@+id/buttonEcaCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/ECA_Calculator_button" />
+        android:text="@string/ECA_Calculator_button"
+        android:onClick="gotoECACalculator"/>
     <Button android:id="@+id/buttonCIRRRates"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/CIRR_Rates_button" />
+        android:text="@string/CIRR_Rates_button"
+        android:onClick="getCIRRRates"/>
     <Button android:id="@+id/buttonOECDConsensus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
