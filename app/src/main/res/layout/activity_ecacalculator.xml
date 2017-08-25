@@ -47,19 +47,8 @@
                 android:ems="10"
                 android:inputType="numberDecimal" />
 
-            <Button android:id="@+id/buttonCIRRRates2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/CIRR_Rates_button"
-            android:onClick="getCIRRRates"/>
 
-        <Button android:id="@+id/buttonOECDConsensus2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/OECD_Consensus_button"
-            android:onClick="getOECDConsensus"/>
-
-    </LinearLayout>
+        </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
@@ -67,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:onClick="calculate"
+        android:onClick=""
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
 
