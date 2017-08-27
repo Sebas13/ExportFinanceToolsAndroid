@@ -6,60 +6,122 @@
     android:layout_height="match_parent"
     tools:context="com.ferre.lopez.sebas.exportfinancetools.ECACalculatorActivity">
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:weightSum="1">
 
-        <TextView android:id="@+id/text"
+        <TextView
+            android:id="@+id/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Introduce contenido español" />
 
-            <EditText
-                android:id="@+id/editText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="numberDecimal" />
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal" />
 
-            <TextView android:id="@+id/text2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Introduce contenido tercer pais" />
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Introduce contenido tercer pais" />
 
-            <EditText
-                android:id="@+id/editText2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="numberDecimal" />
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal" />
 
-            <TextView android:id="@+id/text3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Contenido Local" />
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contenido Local" />
 
-            <EditText
-                android:id="@+id/editText3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="numberDecimal" />
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal" />
 
+        <TextView
+            android:id="@+id/textView_spanish_content_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contenido Español financiado con CESCE" />
 
-        </LinearLayout>
+        <TextView
+            android:id="@+id/textView_result_spanish_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" " />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:onClick=""
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        <TextView
+            android:id="@+id/textView_third_country_content_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contenido 3er país financiado con CESCE" />
 
+        <TextView
+            android:id="@+id/textView_result_third_country_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" " />
 
+        <TextView
+            android:id="@+id/textView_local_costs_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gastos locales financiados con CESCE" />
 
+        <TextView
+            android:id="@+id/textView_result_local_costs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" " />
+
+        <TextView
+            android:id="@+id/textViewTotalContractValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Contract Value: " />
+
+        <TextView
+            android:id="@+id/textViewTotalECAFacility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ECA Facility: " />
+
+        <TextView
+            android:id="@+id/textViewTotalCommFacility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Commercial Facility: " />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@android:drawable/ic_dialog_info" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@android:drawable/ic_menu_share" />
+
+    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

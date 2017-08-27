@@ -21,11 +21,11 @@ public class MenuActivity extends AppCompatActivity {
 
     public void getCIRRRates(View v)
     {
-        startActivity(new Intent(this,ECACalculatorActivity.class));
+        startActivity(new Intent(this,getcirratesActivity.class));
     }
 
     public void getOECDConsensus(View v)
     {
-        startActivity(new Intent(this,ECACalculatorActivity.class));
+        startActivity(new Intent(this,consensusActivity.class));
     }
 }

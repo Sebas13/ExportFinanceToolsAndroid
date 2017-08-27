@@ -25,6 +25,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.ferre.lopez.sebas.exportfinancetools.MenuActivity" />
         </activity>
+        <activity android:name=".getcirratesActivity"></activity>
+        <activity android:name=".consensusActivity"></activity>
     </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>
