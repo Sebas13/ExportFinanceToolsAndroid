@@ -15,7 +15,7 @@ public class getcirratesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_getcirrates);
 
         browser =(WebView) findViewById(R.id.Browser);
-        url = "http://www.oecd.org/tad/xcred/rates.htm";
+        url = "http://docs.google.com/gview?embedded=true&url=http://www.oecd.org/tad/xcred/cirrs.pdf";
         browser.loadUrl(url);
 
 
