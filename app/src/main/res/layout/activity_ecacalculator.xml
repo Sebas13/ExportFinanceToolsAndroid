@@ -6,50 +6,43 @@
     android:layout_height="match_parent"
     tools:context="com.ferre.lopez.sebas.exportfinancetools.ECACalculatorActivity">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:weightSum="1">
 
-        <TextView
-            android:id="@+id/text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Introduce contenido español" />
-
         <EditText
             android:id="@+id/editText"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="5dp"
             android:ems="10"
+            android:hint="Spanish Content (USD m)"
+            android:textStyle="italic"
             android:inputType="numberDecimal" />
-
-        <TextView
-            android:id="@+id/text2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Introduce contenido tercer pais" />
 
         <EditText
             android:id="@+id/editText2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="5dp"
             android:ems="10"
+            android:hint="Third Country Content (USD m)"
+            android:textStyle="italic"
             android:inputType="numberDecimal" />
-
-        <TextView
-            android:id="@+id/text3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Contenido Local" />
 
         <EditText
             android:id="@+id/editText3"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="5dp"
             android:ems="10"
+            android:hint="Local Costs (USD m)"
+            android:textStyle="italic"
             android:inputType="numberDecimal" />
 
         <Switch
@@ -57,7 +50,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checked="false"
-            android:text="Non Regular DownPayment" />
+            android:layout_marginStart="5dp"
+            android:text="Premium (%)" />
 
         <EditText
             android:id="@+id/editText4"
@@ -65,85 +59,182 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="numberDecimal"
+            android:layout_marginBottom="10dp"
             android:visibility="gone"/>
 
         <Switch
             android:id="@+id/switch1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked = "false"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="5dp"
+            android:checked="false"
             android:text="Angola Case - 15%" />
 
-        <TextView
-            android:id="@+id/textView_spanish_content_text"
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/holo_blue_bright" />
+
+        <TableLayout
+            android:id="@+id/TableLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Contenido Español financiado con CESCE" />
+           >
 
-        <TextView
-            android:id="@+id/textView_result_spanish_content"
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp">
+
+                <TextView android:layout_weight="0.40" />
+
+                 <TextView
+                     android:layout_weight="0.30"
+                android:text= "CESCE Tranche "
+                />
+                <TextView
+                    android:layout_weight="0.30"
+                    android:text= "Comm Tranche "/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="0.40"
+                    android:text= " Spanish Content "
+                    />
+
+                <TextView
+                    android:id="@+id/spanish_content_CESCE"
+                    android:layout_weight="0.30"
+                    android:text=" B2 "
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                <TextView
+                    android:layout_weight="0.30"
+                    android:textAlignment="center" />
+
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:layout_weight="0.40"
+                    android:text= " 3rd country Content"
+                    />
+
+                <TextView
+                    android:id="@+id/third_country_content_CESCE"
+                    android:layout_weight="0.30"
+                    android:text=" B3 "
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_weight="0.30" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp">
+
+            <TextView
+                android:layout_weight="0.40"
+                android:text= " Local Costs"
+                />
+
+                <TextView
+                    android:id="@+id/local_costs_CESCE"
+                    android:layout_weight="0.30"
+                    android:text=" B4 "
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                <TextView android:layout_weight="0.30" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/holo_blue_bright" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:layout_weight="0.40"
+                    android:text=" TOTAL"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Eca_loan"
+                    android:layout_weight="0.30"
+                    android:text=" B5 "
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/commercial_loan"
+                    android:layout_weight="0.30"
+                    android:text=" C5 "
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textStyle="bold" />
+            </TableRow>
+
+
+        </TableLayout>
+
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=" " />
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp">
 
-        <TextView
-            android:id="@+id/textView_third_country_content_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Contenido 3er país financiado con CESCE" />
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fab_margin"
+                android:layout_weight="0.25"
+                app:srcCompat="@android:drawable/ic_dialog_info" />
 
-        <TextView
-            android:id="@+id/textView_result_third_country_content"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=" " />
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab2"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fab_margin"
+                android:layout_weight="0.25"
+                app:srcCompat="@android:drawable/ic_menu_share" />
+            />
 
-        <TextView
-            android:id="@+id/textView_local_costs_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Gastos locales financiados con CESCE" />
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab3"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fab_margin"
+                android:layout_weight="0.25"
+                app:srcCompat="@android:drawable/ic_search_category_default" />
 
-        <TextView
-            android:id="@+id/textView_result_local_costs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=" " />
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab4"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fab_margin"
+                android:layout_weight="0.25"
+                app:srcCompat="@android:drawable/ic_menu_share" />
 
-        <TextView
-            android:id="@+id/textViewTotalContractValue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Total Contract Value: " />
-
-        <TextView
-            android:id="@+id/textViewTotalECAFacility"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ECA Facility: " />
-
-        <TextView
-            android:id="@+id/textViewTotalCommFacility"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Commercial Facility: " />
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="@dimen/fab_margin"
-            app:srcCompat="@android:drawable/ic_dialog_info" />
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="@dimen/fab_margin"
-            app:srcCompat="@android:drawable/ic_menu_share" />
-
+        </TableRow>
     </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>
